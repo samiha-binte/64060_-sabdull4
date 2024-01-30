@@ -1,0 +1,67 @@
+---
+title: "Fml Assignment-1"
+author: "Samiha"
+date: "2024-01-29"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+### 1.Summary: This is an analysis on the in built Iris dataset. I have shown the descriptive statistics of the variables, transformation of a quantitative variable and scatter plot for both quantatitive and qualitative variables.
+
+```{r}
+library(tinytex)
+library(caret)
+library(lattice)
+library(ggplot2)
+library(latex2exp)
+```
+
+
+
+2.The in built data set Iris is used here
+```{r}
+ds<-iris
+```
+
+
+3.The descriptive statistics for a selection of quantitative and categorical variables
+```{r}
+summary(ds)
+str(ds)
+dim(ds)
+
+```
+
+
+4.The transformation of the quantitative variable sepal.length variable to logical
+```{r}
+as.logical(ds$Sepal.Length)
+```
+
+
+5.The table for the following variables- petal.length and species
+```{r}
+Table<-table(ds$Petal.Length,ds$Species)
+head(Table)
+```
+
+
+The scatter plot for following variables- petal.length and species
+```{r}
+plot(ds$Petal.Length,ds$Species)
+```
+
+The table is for the following variables- Sepal.Length and Sepal.Width
+```{r}
+Box<-table(ds$Sepal.Length,ds$Sepal.Width)
+head(Box)
+```
+
+
+
+The scatter plot is for following variables- Sepal.Length,Sepal.Width
+```{r}
+plot(ds$Sepal.Length,ds$Sepal.Width)
+```
+
